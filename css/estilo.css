@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --backgroundColor1: #08070B;
+    --backgroundColor2: #040416;
+    --primary: #2b7a8a;
+    --secondary: #dc2f02;
+    --tertiary: #8b0dd5;
+}
+
+::selection {
+    color: #fff;
+    background: var(--primary);
+}
+
+body {
+    font-family: "Tilt Neon", sans-serif !important;
+    height: 100vh;
+    color: #fff !important;
+    background: linear-gradient(to right, var(--backgroundColor1), var(--backgroundColor2));
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* HEADER */
+
+nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.258);
+    border-radius: 0% 0% 50% 50%;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 0;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0 10px;
+    padding: 10px 25px;
+    position: relative;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, var(--primary), var(--tertiary));
+    z-index: -1;
+    box-shadow: -15px -10px 30px -5px var(--primary),
+        15px -10px 30px -5px var(--primary),
+        15px 10px 30px -5px var(--tertiary),
+        -15px 10px 30px -5px var(--tertiary);
+    transition: 0.25s;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+ul li a:hover::before {
+    width: 100%;
+}
+
+ul li .tooltip {
+    font-family: "Tilt Neon", sans-serif !important;
+    font-size: 18px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px; 
+    border-radius: 10px;
+    background: linear-gradient(to bottom, var(--tertiary), var(--primary));
+    white-space: nowrap;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+ul li .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 48%;
+    transform: rotate(180deg);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--tertiary) transparent transparent transparent;
+}
+
+ul li:hover .tooltip {
+    opacity: 1;
+    top: 135%;
+}
+
+.bi, .bx {
+    font-size: 25px;
+}
+
+/* FIN HEADER */
+
+/* INDEX */
+
+.container {
+    padding: 10% 0% 5% 0%;
+    display: grid;
+    place-items: center;
+}
+
+.justified_container {
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.principal_img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 2%;
+}
+
+hr {
+    color: #3d3d3d9a;
+    width: 95%;
+}
+
+h3 {
+    color: #bdbdbd;
+}
+
+.horizontal_container {
+    display: flex;
+    gap: 50px;
+    margin: 2.5%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    background-image: linear-gradient(to right bottom, var(--primary), var(--primary), var(--primary), var(--tertiary), var(--tertiary));
+    border: none;
+    font-size: 1.2em;
+    border-radius: 1.5em;
+    padding: 4px;
+    transition: border-top-left-radius 0.2s ease-in, 
+    border-top-right-radius 0.2s ease-in 0.15s, 
+    border-bottom-right-radius 0.2s ease-in 0.3s,
+    border-bottom-left-radius 0.2s ease-in 0.45s, 
+    padding 0.2s ease-in;
+    position: relative;
+}
+  
+.button__int {
+    background-color: var(--backgroundColor1);
+    color: white;
+    border-radius: 1.3em;
+    padding: 10px 40px;
+    transition: all 0.2s ease-in,
+    border-top-left-radius 0.2s ease-in, 
+    border-top-right-radius 0.2s ease-in 0.15s, 
+    border-bottom-right-radius 0.2s ease-in 0.3s,
+    border-bottom-left-radius 0.2s ease-in 0.45s,
+    padding 0.2s ease-in;
+    font-weight: 600;
+    z-index: -1;
+    box-shadow: -15px -10px 30px -5px var(--primary),
+        15px -10px 30px -5px var(--primary),
+        15px 10px 30px -5px var(--tertiary),
+        -15px 10px 30px -5px var(--tertiary);
+}
+  
+.button:active .button__int {
+    padding: 10px 30px;
+}
+  
+.button:hover {
+    border-radius: 0;
+}
+  
+.button:hover .button__int {
+    border-radius: 0;
+}
+  
+.button:hover .button__int {
+    box-shadow: -25px -10px 30px -5px var(--primary),
+        25px -10px 30px -5px var(--primary),
+        25px 10px 30px -5px var(--tertiary),
+        -25px 10px 30px -5px var(--tertiary);
+}
+
+.contacts_container .bx {
+    color: #fff !important;
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.card {
+    --background: linear-gradient(to left, var(--primary) 0%, var(--tertiary) 100%);
+    width: 400px;
+    height: 600px;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    margin: 20px;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: var(--background);
+    transition: opacity .5s;
+}
+
+.card-info {
+    background-image: url('../img/Currículums/currículum_español.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: .7rem;
+    position: relative;
+    transition: opacity 0.5s;
+}
+
+.card-info.english {
+    background-image: url('../img/Currículums/currículum_inglés.png');
+}
+
+.card-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+}
+
+.card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+    z-index: 2;
+}
+
+.card:hover::after {
+    opacity: 0;
+}
+
+.card:hover .card-info::before {
+    opacity: 1;
+}
+
+.card:hover .card-info {
+    color: var(--primary);
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card:hover a {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+  
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+  
+.border {
+    background-image: linear-gradient(to left, var(--tertiary), var(--primary));
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+  
+.border::before {
+    background-image: linear-gradient(to left, var(--tertiary), var(--primary));
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 180px;
+    width: 180px;
+    scale: 1.1;
+    filter: blur(25px);
+    animation: rotate 4s linear infinite;
+    border-radius: 100px;
+}
+  
+.center_content {
+    background-color: var(--backgroundColor1);
+    width: 180px;
+    height: 180px;
+    border-radius: 19px;
+    scale: 0.9;
+    text-align: center;
+    justify-content: center;
+}
+
+.center_content_img {
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+}
+
+.special {
+    width: 180px !important;
+}
+
+.center_content_title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+.card_2-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+}
+  
+.card_2-container::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, var(--tertiary) 0%, var(--primary) 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(30px);
+}
+  
+.card_2 {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+}
+  
+.card_2 .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, var(--tertiary) 0%, var(--primary) 100% );
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+  
+.card_2 .img-content svg {
+    width: 50px;
+    height: 50px;
+    fill: #212121;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+.card_2 .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: #000;
+    font-weight: bold;
+    padding: 20px 24px;
+    line-height: 1.5;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+.card_2 .content .heading {
+    font-size: 32px;
+    font-weight: 700;
+}
+  
+.card_2:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.card_2:hover .img-content {
+    scale: 2.5;
+    rotate: 30deg;
+    filter: blur(7px);
+}
+  
+.card_2:hover .img-content svg {
+    fill: transparent;
+}
+
+
+
+
+
+.project_container {
+    width: 100%;
+    max-width: 580px;
+    background-image: linear-gradient(163deg, #ff00ff 0%, #3700ff 100%);
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+    padding: 10px; /* Agrega padding para un espacio adecuado alrededor del contenido */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.project_container:hover {
+    box-shadow: 0px 0px 30px 1px rgba(204, 0, 255, 0.3);
+}
+
+.project_content {
+    background-color: #1d1724;
+    border-radius: 10px;
+    transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.project_content:hover {
+    transform: scale(0.98);
+    border-radius: 18px;
+}
+
+.text {
+    color: white;
+    font-size: 17px;
+    margin-top: 10px; /* Separación entre la imagen y el texto */
+}
+
+.project_img {
+    width: 100%;
+    max-width: 530px;
+    height: auto; /* Permite que la imagen mantenga su relación de aspecto */
+    border-radius: 10px; /* Opcional: borde redondeado para la imagen */
+}
+
+.project_img_2 {
+    width: 100%;
+    max-width: 120px;
+    height: auto; /* Permite que la imagen mantenga su relación de aspecto */
+    border-radius: 10px; /* Opcional: borde redondeado para la imagen */
+}
+
+/* FIN INDEX */

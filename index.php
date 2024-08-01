@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Pillado | Inicio</title>
+    <link href="img/portafolio.ico" rel="icon">
+</head>
+<body>
+    
+    <?php include('header.php'); ?>
+
+    <div id="inicio" class="container">
+
+        <h1>BIENVENIDO(A) A MI PORTAFOLIO DIGITAL</h1>
+        <img class="principal_img" src="img/Formal1.jpg">
+        <h2>EDUARDO MANUEL PILLADO OSUNA</h2>
+        <h3>DESARROLLADOR DE SOFTWARE</h3>
+
+        <hr>
+        
+        <h1 id="contacto">CONTACTO</h1>
+        <div class="horizontal_container">
+            <a class="button" href="mailto:eduardompilladoo5@gmail.com" target="_blank">
+                <div class="button__int">
+                    <span class="button__span">
+                        <i class='bx bx-envelope' ></i>
+                    </span>
+                </div>
+            </a>
+            <a class="button" href="https://wa.me/+526941183490" target="_blank">
+                <div class="button__int">
+                    <span class="button__span">
+                        <i class='bx bxl-whatsapp' ></i>
+                    </span>
+                </div>
+            </a>
+            <a class="button" href="https://github.com/EduardoPillado" target="_blank">
+                <div class="button__int">
+                    <span class="button__span">
+                        <i class='bx bxl-github' ></i>
+                    </span>
+                </div>
+            </a>
+            <a class="button" href="https://www.linkedin.com/in/eduardopillado-00ab05320" target="_blank">
+                <div class="button__int">
+                    <span class="button__span">
+                        <i class='bx bxl-linkedin' ></i>
+                    </span>
+                </div>
+            </a>
+            <a class="button" href="https://www.facebook.com/share/xBcG3whBWYsUdYzr/?mibextid=qi2Omg" target="_blank">
+                <div class="button__int">
+                    <span class="button__span">
+                        <i class='bx bxl-facebook' ></i>
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <hr>
+
+        <div class="justified_container">
+
+            <h1 id="sobre_mi">SOBRE MÍ</h1>
+            <p>
+                Soy alguien responsable y respetuoso, siempre dispuesto a mejorar, 
+                a tener una buena relación con las personas que me rodean, a ser 
+                honesto y dedicado, y cuidar siempre cada detalle de lo que hago. 
+                Me gusta poner a prueba mis conocimientos y siempre por aprender
+                más.
+            </p>
+
+        </div>
+
+        <div class="card">
+            <div class="card-info">
+                <a id="link-english" class="button" href="https://drive.google.com/file/d/1r_d6GyDWTKfLgQTpOCEepuPvHSkjga7N/view?usp=drive_link" target="_blank" style="display: none;">
+                    <div class="button__int">
+                        <span class="button__span">
+                            <i class='bx bxs-download'></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a id="link-spanish" class="button" href="https://drive.google.com/file/d/1KFXMERasfk71Q-ro3USYLpLpaYCWFH6S/view?usp=drive_link" target="_blank">
+                    <div class="button__int">
+                        <span class="button__span">
+                            <i class='bx bxs-download'></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 id="conocimientos">CONOCIMIENTOS</h1>
+        <div class="horizontal_container">
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/PHP.png">
+                    <h2 class="center_content_title">PHP</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/HTML.png">
+                    <h2 class="center_content_title">HTML</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/CSS.png">
+                    <h2 class="center_content_title">CSS</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/JavaScript.png">
+                    <h2 class="center_content_title">JavaScript</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img special" src="img/Conocimientos/Laravel.png">
+                    <h2 class="center_content_title">Laravel</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/GitHub.png">
+                    <h2 class="center_content_title">GitHub</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/SQL.png">
+                    <h2 class="center_content_title">SQL</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/Flutter.png">
+                    <h2 class="center_content_title">Flutter</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/Java.png">
+                    <h2 class="center_content_title">Java</h2>
+                </div>
+            </div>
+            <div class="border">
+                <div class="center_content">
+                    <img class="center_content_img" src="img/Conocimientos/React_Native.png">
+                    <h2 class="center_content_title">React Native</h2>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 id="perfil_academico">PERFIL ACADÉMICO</h1>
+        <div class="horizontal_container">
+            <div class="card_2-container">
+                <div class="card_2">
+                    <div class="img-content">
+                        <img class="center_content_img custom_padding" src="img/Conalep.png">
+                    </div>
+                    <div class="content">
+                        <h2 class="center_content_title">
+                            PROFESIONAL TÉCNICO-BACHILLER EN INFORMÁTICA
+                        </h2>
+                        <h3 
+                            style="
+                                color: #000 !important; 
+                                text-align: center;
+                            ">
+                            2018 - 2021
+                        </h3>
+                        <p>
+                            Durante la carrera aprendí aspectos básicos de la informática, 
+                            primeros lenguajes de programación, lógica de programación, y 
+                            programación orientada a objetos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card_2-container">
+                <div class="card_2">
+                    <div class="img-content">
+                        <img class="center_content_img custom_padding" src="img/UTESC.png">
+                    </div>
+                    <div class="content">
+                        <h2 class="center_content_title">
+                            (TSU) EN TECNOLOGÍAS DE LA INFORMACIÓN, 
+                            ÁREA DESARROLLO DE SOFTWARE MULTIPLATAFORMA
+                        </h2>
+                        <h3 
+                            style="
+                                color: #000 !important; 
+                                text-align: center;
+                            ">
+                            2021 - 2023
+                        </h3>
+                        <p>
+                            Durante la carrera aprendí los fundamentos básicos del desarrollo 
+                            de software, tanto web como móviles, y sobre redes e internet de las cosas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card_2-container">
+                <div class="card_2">
+                    <div class="img-content">
+                        <img class="center_content_img custom_padding" src="img/UTESC.png">
+                    </div>
+                    <div class="content">
+                        <h2 class="center_content_title">
+                            (INGENIERÍA) EN DESARROLLO Y GESTIÓN DE SOFTWARE
+                        </h2>
+                        <h3 
+                            style="
+                                color: #000 !important; 
+                                text-align: center;
+                            ">
+                            2023 - Actualmente
+                        </h3>
+                        <p>
+                            Durante la carrera aprendí mejores maneras de desarrollar 
+                            software como seguridad, mayor uso de frameworks, trabajo 
+                            con metodologías, administración de proyectos, y análisis de 
+                            datos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 id="proyectos">PROYECTOS</h1>
+        <div class="horizontal_container">
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/sistema_area_de_proyectos_sitehasa.png">
+                        <p class="text">
+                            Desarrollo de un sistema para el control de proyectos encargos por clientes 
+                            a la empresa. El sistema cuenta conapartados para clientes, proveedores, 
+                            productos de almacén para proyectos, entradas y salidas, entre otros. El
+                            sistema fue desarrollado para su uso interno de los empleados encargados 
+                            del área de proyectos.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/punto_de_venta_productos_rivera.png">
+                        <p class="text">
+                        Desarrollo de un punto venta para realizar ventas, controlar el inventario 
+                        de la sucursal, realizar entradas y salidas en el inventario, realizar 
+                        cortes de caja, y de más. Además de esto el sistema permite a los administradores
+                        gestionar a los empleados de las distintas sucursales.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/sistema_redes_y_servicios_utesc.jpg">
+                        <p class="text">
+                        Desarrollo de un sistema para la gestión de las redes y los servicios a equipos 
+                        dentro de la Universidad Tecnológica de Escuinapa. El sistema cuenta con los 
+                        datos de edificios, áreas, dispositivos, encargados de áreas, y la gestión de
+                        redes entre dispositivos, servicios a equipos o áreas completas, reportes de 
+                        los servicios o de equipos/dispositivos nuevos, entre otros.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="https://github.com/EduardoPillado/On-linebooks.git" target="blank">
+                        <img class="project_img" src="img/Proyectos/on-linebooks.png">
+                        <p class="text">
+                        Desarrollo de una biblioteca en línea. La aplicación muestra libros de diferentes 
+                        géneros guardados como archivos PDF, y permitiendo a los usuarios leer dentro de 
+                        la aplicación los libros, y descargarlos. Cuenta con sistema de usuarios, libros 
+                        por categoría, agregar libros como favoritos, y en la parte administrativa, 
+                        gestionar autores, géneros, usuarios, y libros.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/adivina_la_escena.png">
+                        <p class="text">
+                            Desarrollo de una aplicación web de entretenimiento. Ésta cuenta con categorías 
+                            de películas, series, y videojuegos, y consiste en adivinar en 10 segundos de 
+                            que película, serie, o videojuego es la escena que se muestra también por 10 
+                            segundos. La página cuenta con modo demo para aprender como es el juego y sin 
+                            iniciar sesión, modos aleatorio para adivinar de todas las categorías, y modos 
+                            por categoría en especifico.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/control_ahorro.png">
+                        <p class="text">
+                        Desarrollo de una aplicación web para controlar ahorros de dinero personales. En 
+                        esta aplicación el usuario crea una cuenta, y en ella almacena la cantidad de 
+                        dinero ahorrado con el que cuenta. Permite realizar ingresos y egresos de dinero 
+                        y mencionando el motivo del movimiento, y registrar deudas de alguien hacia el 
+                        usuario o del usuario hacia alguien.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/hot_cars.png">
+                        <p class="text">
+                            Desarrollo de una tienda en línea de autos de juguete. La aplicación permite 
+                            a los usuarios crear cuentas, ver y realizar compras de uno o varios autos 
+                            de juguete guardando en un carrito de compras, y hacer pagos con PayPal.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: HTML, PHP, CSS, JavaScript, MySQL.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img_2" src="img/Proyectos/food_delivery.png">
+                        <p class="text">
+                        Desarrollo de una aplicación web de entretenimiento. Ésta cuenta con categorías de 
+                        películas, series, y videojuegos, y consiste en adivinar en 10 segundos de que 
+                        película, serie, o videojuego es la escena que se muestra también por 10 segundos. 
+                        La página cuenta con modo demo para aprender como es el juego y sin iniciar sesión, 
+                        modos aleatorio para adivinar de todas las categorías, y modos por categoría en 
+                        especifico.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: Framework React Native, Firebase.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="project_container">
+                <div class="project_content">
+                    <a href="" target="blank">
+                        <img class="project_img" src="img/Proyectos/portafolio_js.png">
+                        <p class="text">
+                        Desarrollo de una aplicación web con diferentes códigos de JavaScript, haciendo 
+                        uso de sentencias IF, FOR, WHILE, y DO WHILE.
+                        </p>
+                        <p style="font-weight: bold; color: #fff;">
+                            Tecnologías utilizadas: HTML, PHP, CSS, JavaScript.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es', 
+                    includedLanguages: 'en,es', // Incluye ambos idiomas
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+                
+                // Usar un temporizador para asegurar que Google Translate esté cargado
+                setTimeout(function() {
+                    const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (mutation.attributeName === 'lang') {
+                                const currentLang = document.documentElement.lang;
+                                const cardInfo = document.querySelector('.card-info');
+
+                                if (currentLang === 'en') {
+                                    document.getElementById('link-english').style.display = 'block';
+                                    document.getElementById('link-spanish').style.display = 'none';
+                                    cardInfo.classList.add('english');
+                                } else {
+                                    document.getElementById('link-english').style.display = 'none';
+                                    document.getElementById('link-spanish').style.display = 'block';
+                                    cardInfo.classList.remove('english');
+                                }
+                            }
+                        });
+                    });
+
+                    observer.observe(document.documentElement, {
+                        attributes: true,
+                        attributeFilter: ['lang'] // Solo observar cambios en el atributo lang
+                    });
+                }, 1000); // Ajusta el tiempo si es necesario para asegurar que Google Translate esté cargado
+            }
+        </script>
+
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    </div>
+
+</body>
+</html>
