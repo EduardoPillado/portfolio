@@ -9,7 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/estilo.css?=31">
+    <link rel="stylesheet" href="css/estilo.css?=34">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- SweetAlert2 -->
@@ -18,45 +18,71 @@
 <body>
 
     <nav>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="bi bi-list neon-icon"></i>
+        </div>
+        
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('nav-menu');
+                const icon = document.querySelector('.menu-icon');
+
+                menu.classList.toggle('active');
+                icon.classList.toggle('active');
+            }
+
+            function closeMenu() {
+                const menu = document.getElementById('nav-menu');
+                const icon = document.querySelector('.menu-icon');
+
+                menu.classList.remove('active');
+                icon.classList.remove('active');
+            }
+
+            document.querySelectorAll('#nav-menu li a').forEach(item => {
+                item.addEventListener('click', closeMenu);
+            });
+        </script>
+
+        <ul id="nav-menu">
             <li>
-                <a href="#inicio">
+                <a href="#inicio" onclick="closeMenu()">
                     <i class='bx bxs-home'></i>
                     <span class="tooltip">INICIO</span>
                 </a>
             </li>
             <li>
-                <a href="#contacto">
+                <a href="#contacto" onclick="closeMenu()">
                     <i class='bx bxs-contact' ></i>
                     <span class="tooltip">CONTACTO</span>
                 </a>
             </li>
             <li>
-                <a href="#sobre_mi">
+                <a href="#sobre_mi" onclick="closeMenu()">
                     <i class='bx bxs-smile'></i>
                     <span class="tooltip">SOBRE MI</span>
                 </a>
             </li>
             <li>
-                <a href="#conocimientos">
+                <a href="#conocimientos" onclick="closeMenu()">
                     <i class="bi bi-lightbulb-fill"></i>
                     <span class="tooltip">CONOCIMIENTOS</span>
                 </a>
             </li>
             <li>
-                <a href="#perfil_academico">
+                <a href="#perfil_academico" onclick="closeMenu()">
                     <i class="bi bi-file-earmark-person"></i>
                     <span class="tooltip">PERFIL ACADÉMICO</span>
                 </a>
             </li>
             <li>
-                <a href="#proyectos">
+                <a href="#proyectos" onclick="closeMenu()">
                     <i class='bx bxs-folder'></i>
                     <span class="tooltip">PROYECTOS</span>
                 </a>
             </li>
             <li>
-                <a href="#google_translate_element">
+                <a href="#google_translate_element" onclick="closeMenu()">
                     <i class="bi bi-globe"></i>
                     <span class="tooltip">IDIOMA</span>
                 </a>
@@ -78,7 +104,7 @@
 
     <div id="inicio" class="container">
 
-        <h1>BIENVENIDO(A) A MI PORTAFOLIO DIGITAL</h1>
+        <h1 class="index-title">BIENVENIDO(A) A MI PORTAFOLIO DIGITAL</h1>
         <img class="principal_img" src="img/Formal1.jpg">
         <h2>EDUARDO MANUEL PILLADO OSUNA</h2>
         <h3>DESARROLLADOR DE SOFTWARE</h3>
@@ -315,160 +341,366 @@
         <div class="horizontal_container">
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Sistema-area-de-proyectos-SITEHASA.git" target="blank">
-                        <h4 class="project_title">Sistema para el área de proyectos - SITEHASA</h4>
-                        <img class="project_img" src="img/Proyectos/sistema_area_de_proyectos_sitehasa.png">
-                        <p class="text">
-                            Desarrollo de un sistema para el control de proyectos encargos por clientes 
-                            a la empresa. El sistema cuenta conapartados para clientes, proveedores, 
-                            productos de almacén para proyectos, entradas y salidas, entre otros. El
-                            sistema fue desarrollado para su uso interno de los empleados encargados 
-                            del área de proyectos.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+                    <h4 class="project_title">Sistema para el área de proyectos - SITEHASA</h4>
+                    <img class="project_img" src="img/Proyectos/Sistema_area_de_proyectos_SITEHASA/sistema_area_de_proyectos_sitehasa_1.png">
+                    <p class="text">
+                        Desarrollo de un sistema para el control de proyectos encargos por clientes 
+                        a la empresa. El sistema cuenta conapartados para clientes, proveedores, 
+                        productos de almacén para proyectos, entradas y salidas, entre otros. El
+                        sistema fue desarrollado para su uso interno de los empleados encargados 
+                        del área de proyectos.
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup1">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Sistema-area-de-proyectos-SITEHASA.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup1">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Sistema para área de proyectos -SITEHASA</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Sistema_area_de_proyectos_SITEHASA/sistema_area_de_proyectos_sitehasa_1.png">
+                        <img src="img/Proyectos/Sistema_area_de_proyectos_SITEHASA/sistema_area_de_proyectos_sitehasa_2.png">
+                        <img src="img/Proyectos/Sistema_area_de_proyectos_SITEHASA/sistema_area_de_proyectos_sitehasa_3.png">
+                        <img src="img/Proyectos/Sistema_area_de_proyectos_SITEHASA/sistema_area_de_proyectos_sitehasa_4.png">
+                        <img src="img/Proyectos/Sistema_area_de_proyectos_SITEHASA/sistema_area_de_proyectos_sitehasa_5.png">
+                    </div>
+                </div>
+            </div>
+
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Punto-de-venta-Productos-Rivera.git" target="blank">
-                        <h4 class="project_title">Punto de venta - Productos Rivera</h4>
-                        <img class="project_img" src="img/Proyectos/punto_de_venta_productos_rivera.png">
-                        <p class="text">
+                    <h4 class="project_title">Punto de venta - Productos Rivera</h4>
+                    <img class="project_img" src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_1.png">
+                    <p class="text">
                         Desarrollo de un punto venta para realizar ventas, controlar el inventario 
                         de la sucursal, realizar entradas y salidas en el inventario, realizar 
                         cortes de caja, y de más. Además de esto el sistema permite a los administradores
                         gestionar a los empleados de las distintas sucursales.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup2">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Punto-de-venta-Productos-Rivera.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup2">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Punto de venta - Productos Rivera</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_1.png">
+                        <img src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_2.png">
+                        <img src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_3.png">
+                        <img src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_4.png">
+                        <img src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_5.png">
+                        <img src="img/Proyectos/Punto_de_venta_Productos_Rivera/punto_de_venta_productos_rivera_6.png">
+                    </div>
+                </div>
+            </div>
+
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Sistema-redes-y-servicios-UTEsc.git" target="blank">
-                        <h4 class="project_title">Sistema de redes y servicios - UTEsc</h4>
-                        <img class="project_img" src="img/Proyectos/sistema_redes_y_servicios_utesc.jpg">
-                        <p class="text">
+                    <h4 class="project_title">Sistema de redes y servicios - UTEsc</h4>
+                    <img class="project_img" src="img/Proyectos/Redes_y_Servicios_UTEsc/sistema_redes_y_servicios_utesc_1.png">
+                    <p class="text">
                         Desarrollo de un sistema para la gestión de las redes y los servicios a equipos 
                         dentro de la Universidad Tecnológica de Escuinapa. El sistema cuenta con los 
                         datos de edificios, áreas, dispositivos, encargados de áreas, y la gestión de
                         redes entre dispositivos, servicios a equipos o áreas completas, reportes de 
                         los servicios o de equipos/dispositivos nuevos, entre otros.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup3">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Sistema-redes-y-servicios-UTEsc.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
-            <div class="project_container">
-                <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/On-linebooks.git" target="blank">
-                        <h4 class="project_title">On-linebooks</h4>
-                        <img class="project_img" src="img/Proyectos/on-linebooks.png">
-                        <p class="text">
-                        Desarrollo de una biblioteca en línea. La aplicación muestra libros de diferentes 
-                        géneros guardados como archivos PDF, y permitiendo a los usuarios leer dentro de 
-                        la aplicación los libros, y descargarlos. Cuenta con sistema de usuarios, libros 
-                        por categoría, agregar libros como favoritos, y en la parte administrativa, 
-                        gestionar autores, géneros, usuarios, y libros.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup3">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Sistema de redes y servicios - UTEsc</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Redes_y_Servicios_UTEsc/sistema_redes_y_servicios_utesc_1.png">
+                        <img src="img/Proyectos/Redes_y_Servicios_UTEsc/sistema_redes_y_servicios_utesc_2.png">
+                        <img src="img/Proyectos/Redes_y_Servicios_UTEsc/sistema_redes_y_servicios_utesc_3.png">
+                        <img src="img/Proyectos/Redes_y_Servicios_UTEsc/sistema_redes_y_servicios_utesc_4.png">
+                        <img src="img/Proyectos/Redes_y_Servicios_UTEsc/sistema_redes_y_servicios_utesc_5.png">
+                    </div>
                 </div>
             </div>
+
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Adivina-la-escena.git" target="blank">
-                        <h4 class="project_title">Adivina la escena</h4>
-                        <img class="project_img" src="img/Proyectos/adivina_la_escena.png">
-                        <p class="text">
-                            Desarrollo de una aplicación web de entretenimiento. Ésta cuenta con categorías 
-                            de películas, series, y videojuegos, y consiste en adivinar en 10 segundos de 
-                            que película, serie, o videojuego es la escena que se muestra también por 10 
-                            segundos. La página cuenta con modo demo para aprender como es el juego y sin 
-                            iniciar sesión, modos aleatorio para adivinar de todas las categorías, y modos 
-                            por categoría en especifico.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+                    <h4 class="project_title">On-linebooks</h4>
+                    <img class="project_img" src="img/Proyectos/On-linebooks/on-linebooks_1.png" alt="On-linebooks">
+                    <p class="text">
+                        Desarrollo de una biblioteca en línea. La aplicación muestra libros de diferentes géneros guardados como archivos PDF, permitiendo a los usuarios leer y descargar libros dentro de la aplicación. Cuenta con sistema de usuarios, libros por categoría, favoritos, y gestión administrativa de autores, géneros, usuarios, y libros.
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup4">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/On-linebooks.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
+              
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup4">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">On-linebooks</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/On-linebooks/on-linebooks_1.png">
+                        <img src="img/Proyectos/On-linebooks/on-linebooks_2.png">
+                        <img src="img/Proyectos/On-linebooks/on-linebooks_3.png">
+                        <img src="img/Proyectos/On-linebooks/on-linebooks_4.png">
+                        <img src="img/Proyectos/On-linebooks/on-linebooks_5.png">
+                    </div>
+                </div>
+            </div>
+
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Sistema-control-de-ahorros.git" target="blank">
-                        <h4 class="project_title">Sistema de control de ahorros</h4>
-                        <img class="project_img" src="img/Proyectos/control_ahorro.png">
-                        <p class="text">
+                    <h4 class="project_title">Adivina la escena</h4>
+                    <img class="project_img" src="img/Proyectos/Adivina_la_escena/adivina_la_escena_1.png">
+                    <p class="text">
+                        Desarrollo de una aplicación web de entretenimiento. Ésta cuenta con categorías 
+                        de películas, series, y videojuegos, y consiste en adivinar en 10 segundos de 
+                        que película, serie, o videojuego es la escena que se muestra también por 10 
+                        segundos. La página cuenta con modo demo para aprender como es el juego y sin 
+                        iniciar sesión, modos aleatorio para adivinar de todas las categorías, y modos 
+                        por categoría en especifico.
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup5">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Adivina-la-escena.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup5">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Adivina la escena</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Adivina_la_escena/adivina_la_escena_1.png">
+                        <img src="img/Proyectos/Adivina_la_escena/adivina_la_escena_2.png">
+                        <img src="img/Proyectos/Adivina_la_escena/adivina_la_escena_3.png">
+                        <img src="img/Proyectos/Adivina_la_escena/adivina_la_escena_4.png">
+                        <img src="img/Proyectos/Adivina_la_escena/adivina_la_escena_5.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project_container">
+                <div class="project_content">
+                    <h4 class="project_title">Sistema de control de ahorros</h4>
+                    <img class="project_img" src="img/Proyectos/Control_ahorro/control_ahorro_1.png">
+                    <p class="text">
                         Desarrollo de una aplicación web para controlar ahorros de dinero personales. En 
                         esta aplicación el usuario crea una cuenta, y en ella almacena la cantidad de 
                         dinero ahorrado con el que cuenta. Permite realizar ingresos y egresos de dinero 
                         y mencionando el motivo del movimiento, y registrar deudas de alguien hacia el 
                         usuario o del usuario hacia alguien.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework Laravel, HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup6">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Sistema-control-de-ahorros.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
-            <div class="project_container">
-                <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Hot-Cars.git" target="blank">
-                        <h4 class="project_title">Hot-Cars</h4>
-                        <img class="project_img" src="img/Proyectos/hot_cars.png">
-                        <p class="text">
-                            Desarrollo de una tienda en línea de autos de juguete. La aplicación permite 
-                            a los usuarios crear cuentas, ver y realizar compras de uno o varios autos 
-                            de juguete guardando en un carrito de compras, y hacer pagos con PayPal.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: HTML, PHP, CSS, JavaScript, MySQL.
-                        </p>
-                    </a>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup6">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Control de ahorro</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Control_ahorro/control_ahorro_1.png">
+                        <img src="img/Proyectos/Control_ahorro/control_ahorro_2.png">
+                        <img src="img/Proyectos/Control_ahorro/control_ahorro_3.png">
+                        <img src="img/Proyectos/Control_ahorro/control_ahorro_4.png">
+                        <img src="img/Proyectos/Control_ahorro/control_ahorro_5.png">
+                        <img src="img/Proyectos/Control_ahorro/control_ahorro_6.png">
+                    </div>
                 </div>
             </div>
+
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Food-Delivery.git" target="blank">
-                        <h4 class="project_title">Food Delivery</h4>
-                        <img class="project_img_2" src="img/Proyectos/food_delivery.png">
-                        <p class="text">
-                            Desarrollo de una aplicación móvil para el control de pedidos en un restaurante. 
-                            La aplicación permite a los empleados escoger los platillos que los clientes 
-                            deseen consumir, la mesa que realizo el pedido, costo del pedido, y una sección 
-                            para ver los pedidos realizados.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: Framework React Native, Firebase.
-                        </p>
-                    </a>
+                    <h4 class="project_title">Hot-Cars</h4>
+                    <img class="project_img" src="img/Proyectos/Hot_Cars/hot_cars_1.png">
+                    <p class="text">
+                        Desarrollo de una tienda en línea de autos de juguete. La aplicación permite 
+                        a los usuarios crear cuentas, ver y realizar compras de uno o varios autos 
+                        de juguete guardando en un carrito de compras, y hacer pagos con PayPal.
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: HTML, PHP, CSS, JavaScript, MySQL.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup7">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Hot-Cars.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup7">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Hot Cars</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_1.png">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_2.png">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_3.png">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_4.png">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_5.png">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_6.png">
+                        <img src="img/Proyectos/Hot_Cars/hot_cars_7.png">
+                    </div>
+                </div>
+            </div>
+
             <div class="project_container">
                 <div class="project_content">
-                    <a href="https://github.com/EduardoPillado/Portafolio-JavaScript.git" target="blank">
-                        <h4 class="project_title">Portafolio JavaScript</h4>
-                        <img class="project_img" src="img/Proyectos/portafolio_js.png">
-                        <p class="text">
+                    <h4 class="project_title">Food Delivery</h4>
+                    <img class="project_img_2" src="img/Proyectos/Food_Delivery/food_delivery_1.png">
+                    <p class="text">
+                        Desarrollo de una aplicación móvil para el control de pedidos en un restaurante. 
+                        La aplicación permite a los empleados escoger los platillos que los clientes 
+                        deseen consumir, la mesa que realizo el pedido, costo del pedido, y una sección 
+                        para ver los pedidos realizados.
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: Framework React Native, Firebase.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup8">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Food-Delivery.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup8">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Food Delivery</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Food_Delivery/food_delivery_1.png">
+                        <img src="img/Proyectos/Food_Delivery/food_delivery_2.png">
+                        <img src="img/Proyectos/Food_Delivery/food_delivery_3.png">
+                        <img src="img/Proyectos/Food_Delivery/food_delivery_4.png">
+                        <img src="img/Proyectos/Food_Delivery/food_delivery_5.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project_container">
+                <div class="project_content">
+                    <h4 class="project_title">Portafolio JavaScript</h4>
+                    <img class="project_img" src="img/Proyectos/Portafolio_JS/portafolio_js_1.png">
+                    <p class="text">
                         Desarrollo de una aplicación web con diferentes códigos de JavaScript, haciendo 
                         uso de sentencias IF, FOR, WHILE, y DO WHILE.
-                        </p>
-                        <p style="font-weight: bold; color: #fff;">
-                            Tecnologías utilizadas: HTML, PHP, CSS, JavaScript.
-                        </p>
-                    </a>
+                    </p>
+                    <p style="font-weight: bold; color: #fff;">
+                        Tecnologías utilizadas: HTML, PHP, CSS, JavaScript.
+                    </p>
+                    <div class="button-group">
+                        <button class="gallery-btn" data-popup="popup9">Imágenes</button>
+                        <a href="https://github.com/EduardoPillado/Portafolio-JavaScript.git" target="_blank" class="project-link-btn">Proyecto</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cuadro de imágenes -->
+            <div class="popup" id="popup9">
+                <div class="popup-content">
+                    <span class="close-btn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <div class="gallery-title">Portafolio JavaScript</div>
+                    <div class="gallery">
+                        <img src="img/Proyectos/Portafolio_JS/portafolio_js_1.png">
+                        <img src="img/Proyectos/Portafolio_JS/portafolio_js_2.png">
+                        <img src="img/Proyectos/Portafolio_JS/portafolio_js_3.png">
+                        <img src="img/Proyectos/Portafolio_JS/portafolio_js_4.png">
+                        <img src="img/Proyectos/Portafolio_JS/portafolio_js_5.png">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const galleryBtns = document.querySelectorAll('.gallery-btn');
+                const popups = document.querySelectorAll('.popup');
+                const closeBtns = document.querySelectorAll('.close-btn');
+
+                galleryBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const popupId = btn.getAttribute('data-popup');
+                        document.getElementById(popupId).style.display = 'flex';
+                    });
+                });
+
+                closeBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        btn.closest('.popup').style.display = 'none';
+                    });
+                });
+
+                window.addEventListener('click', (e) => {
+                    popups.forEach(popup => {
+                        if (e.target == popup) {
+                        popup.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
         </div>
 
         <hr>
@@ -479,11 +711,10 @@
             function googleTranslateElementInit() {
                 new google.translate.TranslateElement({
                     pageLanguage: 'es', 
-                    includedLanguages: 'en,es', // Incluye ambos idiomas
+                    includedLanguages: 'en,es',
                     layout: google.translate.TranslateElement.InlineLayout.SIMPLE
                 }, 'google_translate_element');
                 
-                // Usar un temporizador para asegurar que Google Translate esté cargado
                 setTimeout(function() {
                     const observer = new MutationObserver(function(mutations) {
                         mutations.forEach(function(mutation) {
@@ -506,14 +737,13 @@
 
                     observer.observe(document.documentElement, {
                         attributes: true,
-                        attributeFilter: ['lang'] // Solo observar cambios en el atributo lang
+                        attributeFilter: ['lang']
                     });
-                }, 1000); // Ajusta el tiempo si es necesario para asegurar que Google Translate esté cargado
+                }, 1000);
             }
         </script>
 
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
     </div>
 

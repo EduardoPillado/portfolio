@@ -4,8 +4,9 @@
     --backgroundColor1: #08070B;
     --backgroundColor2: #040416;
     --primary: #2b7a8a;
-    --secondary: #dc2f02;
-    --tertiary: #8b0dd5;
+    --secondary: #8b0dd5;
+    --tertiary: #ff00ff;
+    --quaternary: #3700ff;
 }
 
 ::selection {
@@ -69,12 +70,12 @@ ul li a::before {
     height: 100%;
     width: 0;
     border-radius: 8px;
-    background: linear-gradient(to bottom, var(--primary), var(--tertiary));
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
     z-index: -1;
     box-shadow: -15px -10px 30px -5px var(--primary),
         15px -10px 30px -5px var(--primary),
-        15px 10px 30px -5px var(--tertiary),
-        -15px 10px 30px -5px var(--tertiary);
+        15px 10px 30px -5px var(--secondary),
+        -15px 10px 30px -5px var(--secondary);
     transition: 0.25s;
 }
 
@@ -95,7 +96,7 @@ ul li .tooltip {
     transform: translateX(-50%);
     padding: 5px 10px; 
     border-radius: 10px;
-    background: linear-gradient(to bottom, var(--tertiary), var(--primary));
+    background: linear-gradient(to bottom, var(--secondary), var(--primary));
     white-space: nowrap;
     line-height: 30px;
     text-align: center;
@@ -115,7 +116,7 @@ ul li .tooltip::after {
     transform: rotate(180deg);
     border-width: 5px;
     border-style: solid;
-    border-color: var(--tertiary) transparent transparent transparent;
+    border-color: var(--secondary) transparent transparent transparent;
 }
 
 ul li:hover .tooltip {
@@ -126,6 +127,100 @@ ul li:hover .tooltip {
 .bi, .bx {
     font-size: 25px;
 }
+
+
+
+
+
+/* HEADER A SIDEBAR DESPLEGABLE */
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon .bi {
+    font-size: 40px !important;
+}
+
+.menu-icon.active {
+    transform: rotate(90deg);
+}
+
+.neon-icon {
+    text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 20px var(--primary),
+                 0 0 40px var(--secondary), 0 0 60px var(--secondary), 0 0 80px var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover .neon-icon {
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--secondary),
+                 0 0 50px var(--secondary), 0 0 70px var(--secondary), 0 0 100px var(--secondary);
+}
+
+.neon-icon {
+    animation: pulse-neon 1.5s infinite alternate;
+}
+
+@keyframes pulse-neon {
+    from {
+        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 20px var(--primary),
+                     0 0 40px var(--secondary), 0 0 60px var(--secondary), 0 0 80px var(--secondary);
+    }
+    to {
+        text-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary), 0 0 40px var(--secondary),
+                     0 0 50px var(--secondary), 0 0 70px var(--secondary), 0 0 100px var(--secondary);
+    }
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 10px 15px;
+        border-radius: 10px 0 0px 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    ul li a {
+        font-size: 18px;
+        padding: 10px 20px;
+        text-align: right;
+    }
+}
+
+/* FIN HEADER A SIDEBAR DESPLEGABLE */
+
+
+
+
 
 /* FIN HEADER */
 
@@ -142,6 +237,10 @@ ul li:hover .tooltip {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.index-title {
+    text-align: center;
 }
 
 .principal_img {
@@ -169,7 +268,7 @@ h3 {
 }
 
 .button {
-    background-image: linear-gradient(to right bottom, var(--primary), var(--primary), var(--primary), var(--tertiary), var(--tertiary));
+    background-image: linear-gradient(to right bottom, var(--primary), var(--primary), var(--primary), var(--secondary), var(--secondary));
     border: none;
     font-size: 1.2em;
     border-radius: 1.5em;
@@ -184,7 +283,7 @@ h3 {
   
 .button__int {
     background-color: var(--backgroundColor1);
-    color: white;
+    color: #fff;
     border-radius: 1.3em;
     padding: 10px 40px;
     transition: all 0.2s ease-in,
@@ -197,8 +296,8 @@ h3 {
     z-index: -1;
     box-shadow: -15px -10px 30px -5px var(--primary),
         15px -10px 30px -5px var(--primary),
-        15px 10px 30px -5px var(--tertiary),
-        -15px 10px 30px -5px var(--tertiary);
+        15px 10px 30px -5px var(--secondary),
+        -15px 10px 30px -5px var(--secondary);
 }
   
 .button:active .button__int {
@@ -216,8 +315,8 @@ h3 {
 .button:hover .button__int {
     box-shadow: -25px -10px 30px -5px var(--primary),
         25px -10px 30px -5px var(--primary),
-        25px 10px 30px -5px var(--tertiary),
-        -25px 10px 30px -5px var(--tertiary);
+        25px 10px 30px -5px var(--secondary),
+        -25px 10px 30px -5px var(--secondary);
 }
 
 .contacts_container .bx {
@@ -230,7 +329,7 @@ p {
 }
 
 .card {
-    --background: linear-gradient(to left, var(--primary) 0%, var(--tertiary) 100%);
+    --background: linear-gradient(to left, var(--primary) 0%, var(--secondary) 100%);
     width: 400px;
     height: 600px;
     padding: 5px;
@@ -308,7 +407,7 @@ p {
 }
 
 .card a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: absolute;
@@ -333,7 +432,7 @@ p {
 }
   
 .border {
-    background-image: linear-gradient(to left, var(--tertiary), var(--primary));
+    background-image: linear-gradient(to left, var(--secondary), var(--primary));
     width: 180px;
     height: 180px;
     border-radius: 20px;
@@ -341,7 +440,7 @@ p {
 }
   
 .border::before {
-    background-image: linear-gradient(to left, var(--tertiary), var(--primary));
+    background-image: linear-gradient(to left, var(--secondary), var(--primary));
     content: "";
     position: absolute;
     z-index: -1;
@@ -394,7 +493,7 @@ p {
     z-index: -1;
     position: absolute;
     inset: 0;
-    background: linear-gradient(-45deg, var(--tertiary) 0%, var(--primary) 100% );
+    background: linear-gradient(-45deg, var(--secondary) 0%, var(--primary) 100% );
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(30px);
 }
@@ -412,7 +511,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(-45deg, var(--tertiary) 0%, var(--primary) 100% );
+    background: linear-gradient(-45deg, var(--secondary) 0%, var(--primary) 100% );
     transition: scale 0.6s, rotate 0.6s, filter 1s;
 }
   
@@ -471,12 +570,12 @@ p {
 .project_container {
     width: 100%;
     max-width: 580px;
-    background-image: linear-gradient(163deg, #ff00ff 0%, #3700ff 100%);
+    background-image: linear-gradient(163deg, var(--tertiary) 0%, var(--quaternary) 100%);
     border-radius: 20px;
     text-align: center;
     transition: all 0.25s cubic-bezier(0, 0, 0, 1);
-    padding: 10px; /* Agrega padding para un espacio adecuado alrededor del contenido */
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .project_container:hover {
@@ -501,9 +600,9 @@ p {
 }
 
 .text {
-    color: white;
+    color: #fff;
     font-size: 17px;
-    margin-top: 10px; /* Separación entre la imagen y el texto */
+    margin-top: 10px
 }
 
 .project_title {
@@ -515,108 +614,126 @@ p {
 .project_img {
     width: 100%;
     max-width: 530px;
-    height: auto; /* Permite que la imagen mantenga su relación de aspecto */
-    border-radius: 10px; /* Opcional: borde redondeado para la imagen */
+    height: auto;
+    border-radius: 10px;
 }
 
 .project_img_2 {
     width: 100%;
     max-width: 120px;
-    height: auto; /* Permite que la imagen mantenga su relación de aspecto */
-    border-radius: 10px; /* Opcional: borde redondeado para la imagen */
+    height: auto;
+    border-radius: 10px;
 }
 
 
 
 
 
-/* From Uiverse.io by gharsh11032000 */ 
-.animated-button {
-    position: relative;
+/* GALERÍA DE IMÁGENES */
+
+.button-group {
     display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 16px 36px;
-    border: 4px solid;
-    border-color: transparent;
+    gap: 30px;
+    margin-top: 15px;
+}
+  
+.gallery-btn, .project-link-btn {
+    padding: 10px 15px;
     font-size: 16px;
-    background-color: inherit;
-    border-radius: 100px;
-    font-weight: 600;
-    color: greenyellow;
-    box-shadow: 0 0 0 2px greenyellow;
+    border: none;
     cursor: pointer;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #fff !important;
+    text-align: center;
+    text-decoration: none !important;
+}
   
-  .animated-button svg {
-    position: absolute;
-    width: 24px;
-    fill: greenyellow;
-    z-index: 9;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
+.gallery-btn, .project-link-btn {
+  background-color: var(--quaternary);
+  box-shadow: 0 0 10px var(--quaternary), 0 0 20px var(--quaternary);
+}
+
+.gallery-btn:hover, .project-link-btn:hover {
+  background-color: var(--tertiary);
+  box-shadow: 0 0 20px var(--tertiary), 0 0 40px var(--tertiary);
+}
+
+
+
+
+ 
+/* Estilos del cuadro emergente */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
   
-  .animated-button .arr-1 {
-    right: 16px;
-  }
-  
-  .animated-button .arr-2 {
-    left: -25%;
-  }
-  
-  .animated-button .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background-color: greenyellow;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
-  .animated-button .text {
+.popup-content {
+    background-color: var(--backgroundColor2);
+    padding: 30px;
+    border-radius: 10px;
     position: relative;
-    z-index: 1;
-    transform: translateX(-12px);
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
+    box-shadow: 0 0 10px var(--primary), 0 0 40px var(--secondary);
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+}
   
-  .animated-button:hover {
-    box-shadow: 0 0 0 12px transparent;
-    color: #212121;
-    border-radius: 12px;
-  }
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
   
-  .animated-button:hover .arr-1 {
-    right: -25%;
-  }
+.close-btn:hover {
+    color: var(--secondary);
+    transform: rotate(180deg);
+}
   
-  .animated-button:hover .arr-2 {
-    left: 16px;
-  }
+.gallery-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
+}
   
-  .animated-button:hover .text {
-    transform: translateX(12px);
-  }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
   
-  .animated-button:hover svg {
-    fill: #212121;
-  }
+.gallery img {
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--secondary), 0 0 20px var(--secondary);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
   
-  .animated-button:active {
-    scale: 0.95;
-    box-shadow: 0 0 0 4px greenyellow;
-  }
-  
-  .animated-button:hover .circle {
-    width: 220px;
-    height: 220px;
-    opacity: 1;
-  }  
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--tertiary), 0 0 40px var(--tertiary);
+}  
+
+/* FIN GALERÍA DE IMÁGENES */
+
+
+
+
 
 /* FIN INDEX */
