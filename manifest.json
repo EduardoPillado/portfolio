@@ -1,0 +1,36 @@
+{ 
+    "start_url": "/",
+    "short_name": "PORTFOLIO",  
+    "name": "PORTFOLIO EDUARDO PILLADO",  
+    "background_color": "#040416",  
+    "theme_color": "#040416",  
+    "orientation": "portrait",  
+    "display": "standalone",  
+    "icons":[
+      {  
+        "src": "mipmap-hdpi/portafolio.png",  
+        "type": "image/png",  
+        "sizes": "72x72"
+      },
+      {
+        "src": "mipmap-mdpi/portafolio.png.png",  
+        "type": "image/png",  
+        "sizes": "48x48"
+      },
+      {
+        "src": "mipmap-xhdpi/portafolio.png.png",  
+        "type": "image/png",  
+        "sizes": "96x96"
+      },
+      {
+        "src": "mipmap-xxhdpi/portafolio.png.png",  
+        "type": "image/png",  
+        "sizes": "144x144"
+      },
+      {
+        "src": "mipmap-xxxhdpi/portafolio.png.png",  
+        "type": "image/png",  
+        "sizes": "192x192"
+      }
+    ] 
+  }
