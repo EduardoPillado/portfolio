@@ -239,7 +239,7 @@ ul li:hover .tooltip {
     margin: 0 auto;
 }
 
-.index-title {
+.index-title, .name, .career-title {
     text-align: center;
 }
 
