@@ -8,27 +8,27 @@
     "display": "standalone",  
     "icons":[
       {  
-        "src": "mipmap-hdpi/portafolio.png",  
+        "src": "img/Manifest_img/mipmap-hdpi/portafolio.png",  
         "type": "image/png",  
         "sizes": "72x72"
       },
       {
-        "src": "mipmap-mdpi/portafolio.png",  
+        "src": "img/Manifest_img/mipmap-mdpi/portafolio.png",  
         "type": "image/png",  
         "sizes": "48x48"
       },
       {
-        "src": "mipmap-xhdpi/portafolio.png",  
+        "src": "img/Manifest_img/mipmap-xhdpi/portafolio.png",  
         "type": "image/png",  
         "sizes": "96x96"
       },
       {
-        "src": "mipmap-xxhdpi/portafolio.png",  
+        "src": "img/Manifest_img/mipmap-xxhdpi/portafolio.png",  
         "type": "image/png",  
         "sizes": "144x144"
       },
       {
-        "src": "mipmap-xxxhdpi/portafolio.png",  
+        "src": "img/Manifest_img/mipmap-xxxhdpi/portafolio.png",  
         "type": "image/png",  
         "sizes": "192x192"
       }
