@@ -357,7 +357,6 @@ p {
 }
 
 .card-info {
-    background-image: url('../img/Currículums/currículum_español.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -371,9 +370,17 @@ p {
     transition: opacity 0.5s;
 }
 
-.card-info.english {
+.spanish {
+    background-image: url('../img/Currículums/currículum_español.png')
+}
+
+.english {
     background-image: url('../img/Currículums/currículum_inglés.png');
 }
+
+/* .card-info.english {
+    background-image: url('../img/Currículums/currículum_inglés.png');
+} */
 
 .card-info::before {
     content: "";
