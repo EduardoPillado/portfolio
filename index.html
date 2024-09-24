@@ -772,3 +772,15 @@
 
 </body>
 </html>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service_worker.js')
+        .then(function(registration) {
+            console.log('Service worker registrado:', registration);
+        })
+        .catch(function(error) {
+            console.log('Error al registrar el service worker:', error);
+        });
+    }
+</script>
