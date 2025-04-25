@@ -1,5 +1,6 @@
 const CACHE_NAME = 'portfolio_cache';
 const urlsToCache = [
+  '/',
   'index.html',
   'index_en.html',
 
